@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	const int n = 5;
+	int arr[n][n];
+	int barr[n][n];
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			arr[i][j] = rand() % 10;
+		}
+	}
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cout << arr[i][j]<<" ";
+			}
+			cout << endl;
+		}
+		for (int i = 0; i<n; i++)
+			
+		{
+			for (int j = 0; j<n; j++)
+				barr[i][j] = arr[n - j - 1][i];
+		}
+		cout << "__________" << endl;
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cout<<barr[i][j] << " ";
+			}
+			cout << endl;
+		}
+		return 0;
+	}
+  
